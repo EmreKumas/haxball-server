@@ -1,0 +1,15 @@
+{
+  "name": "headless-hax",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Headless hax",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --experimental-json-modules app.js"
+  },
+  "author": "emre.kumas",
+  "license": "ISC",
+  "dependencies": {
+    "haxball.js": "^2.0.3"
+  }
+}
