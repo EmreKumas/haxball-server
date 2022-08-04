@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Headless hax",
   "main": "app.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "node --experimental-json-modules app.js"
   },

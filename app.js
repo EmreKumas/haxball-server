@@ -1,7 +1,7 @@
 import headless from "haxball.js";
 import { GAME_STATE, SCORE_LIMIT, TIME_LIMIT, TEAM, TOKEN } from "./utilities/constant.js";
 import { onPlayerJoin, onPlayerLeave } from "./events/join-leave.js";
-import powerMap from "./maps/power-map.json";
+import powerMap from "./maps/power-map.json" assert {type: "json"};
 import { onGameStart, onGameStop, onGamePause, onGameUnpause } from "./events/game.js";
 import { onPlayerChat } from "./events/chat.js";
 
@@ -26,13 +26,12 @@ headless.then((HBInit) => {
 
 function initializeGame(HBInit) {
     room = HBInit({
-        roomNameas: "Public Kese --- PowerMap vs3",
-        roomName: "Deneme",
+        roomName: "Public Kese --- PowerMap vs3",
         maxPlayers: 6,
         token: TOKEN,
         geo: { "code": "tr", "lat": 41, "lon": 29 },
         noPlayer: true,
-        public: false
+        public: true
     });
 
     room.setCustomStadium(JSON.stringify(powerMap));
