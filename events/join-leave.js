@@ -1,4 +1,5 @@
-import { room } from "../app.js";
+import { room, variables } from "../app.js";
+import { removeItem } from "../utilities/common.js";
 import { playerIdentities } from "../utilities/constant.js";
 import { addToGame, isGameFull, updateTeams } from "../utilities/team.js";
 
@@ -19,4 +20,8 @@ export function onPlayerJoin(player) {
 	}
 
 	addToGame(player);
+};
+
+export function onPlayerLeave(player) {
+	removeItem(variables.afkPlayers, player.id);
 };

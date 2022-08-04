@@ -1,4 +1,6 @@
-export const TOKEN = "thr1.AAAAAGLr2S7c1zGFh_0EOQ.ThGrgM2ZpeE";
+import { restartCommand, shuffleCommand, afkCommand } from "./command.js";
+
+export const TOKEN = "thr1.AAAAAGLsAJZMRU3-zBm-yg.aD3nXEUKPIg";
 
 export const SCORE_LIMIT = 3;
 export const TIME_LIMIT = 3;
@@ -37,16 +39,16 @@ export const COMMANDS = {
 	"!r": {
 		"description": "Restarts the game instantenously",
 		"requireAdmin": false,
-		// "function": restartCommand
+		"function": restartCommand
 	},
 	"!s": {
 		"description": "Shuffles players and restarts the game",
 		"requireAdmin": false,
-		// "function": shuffleCommand
+		"function": shuffleCommand
 	},
 	"!afk": {
 		"description": "Sets player away from keyboard",
 		"requireAdmin": false,
-		// "function": afkCommand
+		"function": afkCommand
 	}
 };

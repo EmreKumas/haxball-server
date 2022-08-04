@@ -1,13 +1,3 @@
-room.onPlayerChat = function(player, message) {
-	if (!message.startsWith("!")) return true;
-
-	if (commands.hasOwnProperty(message) && (!commands[message].requireAdmin || (commands[message].requireAdmin && player.admin))) {
-		commands[message].function(player, message);
-	}
-
-	return false;
-}
-
 room.onTeamGoal = function (team) {
 	if (team == Team.RED) {
 		redTeamScore++;

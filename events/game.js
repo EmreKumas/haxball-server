@@ -9,12 +9,19 @@ export function onGameStart(byPlayer) {
 export function onGameStop(byPlayer) {
     variables.gameState = GAME_STATE.STOP;
 
-    if (byPlayer) {
+    if (byPlayer || variables.restartOnCommand) {
+        variables.restartOnCommand = false;
 		return;
 	}
 
     room.sendAnnouncement("3 seconds countdown started before shuffling the players!", null, COLORS.ANNOUNCEMENT_COLOR, "bold");
-    recalculateTeams();
+    setTimeout(_ => {
+        if (variables.gameState != GAME_STATE.STOP) {
+            return;
+        }
+        
+        recalculateTeams();
+    }, 3000);
 };
 
 export function onGamePause(byPlayer) {

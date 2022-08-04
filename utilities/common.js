@@ -14,3 +14,11 @@ export function shuffle(array) {
 
     return array;
 }
+
+export function removeItem(arr, value) {
+	var index = arr.indexOf(value);
+
+	if (index > -1) {
+		arr.splice(index, 1);
+	}
+}

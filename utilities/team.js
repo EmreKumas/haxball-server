@@ -1,6 +1,6 @@
 import { room, variables } from "../app.js";
-import { GAME_STATE, IDEAL_TEAM_LIMIT, TEAM } from "./constant.js";
-import { shuffle } from "./common.js";
+import { IDEAL_TEAM_LIMIT, TEAM } from "./constant.js";
+import { removeItem, shuffle } from "./common.js";
 
 export function updateTeams() {
     let players = room.getPlayerList();
@@ -28,19 +28,26 @@ export function addToGame(player) {
 	}
 }
 
+export function addAnyoneToGame() {
+	updateTeams();
+
+	if (isGameFull() || variables.spectators.length == variables.afkPlayers.length) {
+		return;
+	}
+
+	let luckyGuy = variables.spectators.find(player => !variables.afkPlayers.includes(player.id));
+	
+	removeItem(variables.spectators, luckyGuy);
+	
+	addToGame(luckyGuy);
+}
+
 export function recalculateTeams() {
-	setTimeout(() => {
-		if (variables.gameState != GAME_STATE.STOP) {
-			return;
-		}
+	// Belli koşullar kontrol edilerek shuffle olup olmadığına karar verilecek.
+	resetAllToSpectators();
+	setTimeout(() => randomlyDistribute(), 500);
 
-		// Belli koşullar kontrol edilerek shuffle olup olmadığına karar verilecek.
-		resetAllToSpectators();
-		setTimeout(() => randomlyDistribute(), 500);
-
-		setTimeout(() => room.startGame(), 1000);
-
-	}, 3000);
+	setTimeout(() => room.startGame(), 1000);
 }
 
 function resetAllToSpectators() {

@@ -1,8 +1,9 @@
 import headless from "haxball.js";
 import { GAME_STATE, SCORE_LIMIT, TIME_LIMIT, TEAM, TOKEN } from "./utilities/constant.js";
-import { onPlayerJoin } from "./events/join-leave.js";
+import { onPlayerJoin, onPlayerLeave } from "./events/join-leave.js";
 import powerMap from "./maps/power-map.json";
 import { onGameStart, onGameStop, onGamePause, onGameUnpause } from "./events/game.js";
+import { onPlayerChat } from "./events/chat.js";
 
 ///////////////////////// VARIABLES ///////////////////////////////
 
@@ -12,16 +13,10 @@ export var variables = {
     teamRed: [],
     teamBlue: [],
     spectators: [],
-    gameState: GAME_STATE.STOP
+    gameState: GAME_STATE.STOP,
+    restartOnCommand: false,
+    afkPlayers: []
 };
-
-var disableOnStopEvent = false;
-var afkPlayers = [];
-var playingPlayersCount = 0;
-var redTeamScore = 0;
-var blueTeamScore = 0;
-var endGameTrigger = false;
-var winSeries = [];
 
 ///////////////////////// REST ///////////////////////////////////////
 
@@ -50,9 +45,12 @@ function initializeGame(HBInit) {
     room.onRoomLink = (link) => console.log(link);
     
     room.onPlayerJoin = onPlayerJoin;
+    room.onPlayerLeave = onPlayerLeave;
 
     room.onGameStart = onGameStart;
     room.onGameStop = onGameStop;
     room.onGamePause = onGamePause;
     room.onGameUnpause = onGameUnpause;
+
+    room.onPlayerChat = onPlayerChat;
 }
