@@ -1,5 +1,5 @@
 import headless from "haxball.js";
-import { GAME_STATE, SCORE_LIMIT, TIME_LIMIT, TEAM } from "./utilities/constant.js";
+import { GAME_STATE, SCORE_LIMIT, TIME_LIMIT, TEAM, TOKEN } from "./utilities/constant.js";
 import { onPlayerJoin } from "./events/join-leave.js";
 import powerMap from "./maps/power-map.json";
 import { onGameStart, onGameStop, onGamePause, onGameUnpause } from "./events/game.js";
@@ -34,7 +34,7 @@ function initializeGame(HBInit) {
         roomNameas: "Public Kese --- PowerMap vs3",
         roomName: "Deneme",
         maxPlayers: 6,
-        token: "thr1.AAAAAGLq4S7D3w2gdT_bPw.aeRtkOi0WTo",
+        token: TOKEN,
         geo: { "code": "tr", "lat": 41, "lon": 29 },
         noPlayer: true,
         public: false

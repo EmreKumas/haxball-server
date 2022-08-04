@@ -1,3 +1,5 @@
+export const TOKEN = "thr1.AAAAAGLr2S7c1zGFh_0EOQ.ThGrgM2ZpeE";
+
 export const SCORE_LIMIT = 3;
 export const TIME_LIMIT = 3;
 export const IDEAL_TEAM_LIMIT = 3;
