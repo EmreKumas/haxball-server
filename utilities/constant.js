@@ -1,6 +1,6 @@
 import { restartCommand, shuffleCommand, afkCommand } from "./command.js";
 
-export const TOKEN = "thr1.AAAAAGLybOm4yA1dj5KqwQ.CSyPCUXvyvI";
+export const TOKEN = process.env.HEADLESS_TOKEN;
 
 export const SCORE_LIMIT = 3;
 export const TIME_LIMIT = 3;
