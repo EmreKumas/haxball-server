@@ -5,7 +5,7 @@
   "description": "Headless hax",
   "main": "app.js",
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   },
   "scripts": {
     "start": "node --experimental-json-modules app.js"

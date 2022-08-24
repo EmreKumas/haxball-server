@@ -19,19 +19,19 @@ export const COLORS = {
 export const playerIdentities = [
 	{
 		"name": "Usta",
-		"publicId": "j9F42CoPFpL-_5_Qhli_irMrCAlPncTW51XUcRwHi78"
+		"publicId": "hILCTSUs03yujp_eUp5fIfG7gulNHDkxt5nWEfdkdBc"
 	},
 	{
 		"name": "Pat",
-		"publicId": ""
+		"publicId": "C8Pqwy5Rgy5eM6TLXim9yXCR9ZH5qycUtop0vIChAt8"
 	},
 	{
 		"name": "Kek",
-		"publicId": ""
+		"publicId": "54w54ripJKDH-dG6GRMFVpA4pbZDy4-QtHeSThTf-JE"
 	},
 	{
 		"name": "Tellak",
-		"publicId": ""
+		"publicId": "f3JtX9JUDRwAiB51SfqsA4scSx_oBNg93CMcAINVJIA"
 	}
 ];
 
