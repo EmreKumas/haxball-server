@@ -56,13 +56,21 @@ function resetAllToSpectators() {
 	players.forEach(player => room.setPlayerTeam(player.id, TEAM.SPECTATORS));
 }
 
+function isAllSpectatorsAfk() {
+	return variables.afkPlayers.length == variables.spectators.length;
+}
+
 function randomlyDistribute() {
 	updateTeams();
 	shuffle(variables.spectators);
 	
-	while (!isGameFull() && variables.spectators.length > 0) {
+	while (!isGameFull() && !isAllSpectatorsAfk()) {
 		let randomNumber = Math.floor(Math.random() * variables.spectators.length);
 		let randomPlayer = variables.spectators[randomNumber];
+
+		if (variables.afkPlayers.includes(randomPlayer.id)) {
+			continue;
+		}
 
 		addToGame(randomPlayer);
 
