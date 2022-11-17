@@ -19,7 +19,7 @@ export const COLORS = {
 export const playerIdentities = [
 	{
 		"name": "Usta",
-		"publicId": "hILCTSUs03yujp_eUp5fIfG7gulNHDkxt5nWEfdkdBc"
+		"publicId": "WNJWKFGr-wztb8q4xRy4X9klwSa3JTyDTzDuGF1vdpE"
 	},
 	{
 		"name": "Pat",
