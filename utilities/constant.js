@@ -11,7 +11,8 @@ import {
 	yalvaririmCommand,
 	ercikCommand,
 	dundoCommand,
-	ruhCommand
+	ruhCommand,
+	komutCommand
 } from "./command.js";
 
 export const TOKEN = process.env.HEADLESS_TOKEN;
@@ -65,53 +66,58 @@ export const COMMANDS = {
 		"requireAdmin": false,
 		"function": afkCommand
 	},
+	"!komutlar": {
+		"description": "Lists all available commands",
+		"requireAdmin": false,
+		"function": komutCommand
+	},
 	"!fantom": {
-		"description": "Fantom command",
+		"description": "cemil babba soforun arkasindadir her zaman",
 		"requireAdmin": false,
 		"function": fantomCommand
 	},
 	"!tellak": {
-		"description": "Tellak command",
+		"description": "tellak ban",
 		"requireAdmin": false,
 		"function": tellakCommand
 	},
 	"!usta": {
-		"description": "Usta command",
+		"description": ":pomp:",
 		"requireAdmin": false,
 		"function": ustaCommand
 	},
 	"!dayi": {
-		"description": "Usta command",
+		"description": "aha dayiya sor",
 		"requireAdmin": false,
 		"function": dayiCommand
 	},
 	"!siyah": {
-		"description": "Usta command",
+		"description": "her sey mi siyah",
 		"requireAdmin": false,
 		"function": siyahCommand
 	},
 	"!zert": {
-		"description": "Usta command",
+		"description": "tellak babba sizi zert zert geseledi",
 		"requireAdmin": false,
 		"function": zertCommand
 	},
 	"!ercik": {
-		"description": "Ercik command",
+		"description": "bu bir sanal alem, lütfen haddinizi bilin arkadaşlar",
 		"requireAdmin": false,
 		"function": ercikCommand
 	},
 	"!yalvaririm": {
-		"description": "Yalvaririm command",
+		"description": "yalvarırım atma",
 		"requireAdmin": false,
 		"function": yalvaririmCommand
 	},
 	"!dundo": {
-		"description": "Dundo command",
+		"description": "efendim lütfen açar mısınız kapıyı",
 		"requireAdmin": false,
 		"function": dundoCommand
 	},
 	"!ruh": {
-		"description": "Ruh command",
+		"description": "ruh gibi geziyosun",
 		"requireAdmin": false,
 		"function": ruhCommand
 	}

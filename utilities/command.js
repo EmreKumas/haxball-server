@@ -1,6 +1,6 @@
 import { room, variables } from "../app.js";
 import { removeItem } from "./common.js";
-import { COLORS, TEAM } from "./constant.js";
+import { COLORS, COMMANDS, TEAM } from "./constant.js";
 import { addAnyoneToGame, recalculateTeams, isGameFull, addToGame } from "./team.js";
 
 export function restartCommand(player, message) {
@@ -36,6 +36,11 @@ export function afkCommand(player, message) {
 
 	room.sendAnnouncement(`${player.name} sets himself as afk!`, null, COLORS.ANNOUNCEMENT_COLOR, "bold");
 	variables.afkPlayers.push(player.id);
+}
+
+export function komutCommand(player, message) {
+	let commands = Object.keys(COMMANDS).join();
+	room.sendAnnouncement(`${commands}`, player.id, COLORS.ANNOUNCEMENT_COLOR, "bold");
 }
 
 export function fantomCommand(player, message) {
