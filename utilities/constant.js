@@ -1,4 +1,18 @@
-import { restartCommand, shuffleCommand, afkCommand } from "./command.js";
+import {
+	restartCommand,
+	shuffleCommand,
+	afkCommand,
+	fantomCommand,
+	tellakCommand,
+	ustaCommand,
+	dayiCommand,
+	siyahCommand,
+	zertCommand,
+	yalvaririmCommand,
+	ercikCommand,
+	dundoCommand,
+	ruhCommand
+} from "./command.js";
 
 export const TOKEN = process.env.HEADLESS_TOKEN;
 
@@ -27,7 +41,7 @@ export const playerIdentities = [
 	},
 	{
 		"name": "Kek",
-		"publicId": "54w54ripJKDH-dG6GRMFVpA4pbZDy4-QtHeSThTf-JE"
+		"publicId": "uVyi66aqxazL1kWjpR_1zcqwpRTiJMmBMMrIUZ7d6Rg"
 	},
 	{
 		"name": "Tellak",
@@ -50,5 +64,55 @@ export const COMMANDS = {
 		"description": "Sets player away from keyboard",
 		"requireAdmin": false,
 		"function": afkCommand
+	},
+	"!fantom": {
+		"description": "Fantom command",
+		"requireAdmin": false,
+		"function": fantomCommand
+	},
+	"!tellak": {
+		"description": "Tellak command",
+		"requireAdmin": false,
+		"function": tellakCommand
+	},
+	"!usta": {
+		"description": "Usta command",
+		"requireAdmin": false,
+		"function": ustaCommand
+	},
+	"!dayi": {
+		"description": "Usta command",
+		"requireAdmin": false,
+		"function": dayiCommand
+	},
+	"!siyah": {
+		"description": "Usta command",
+		"requireAdmin": false,
+		"function": siyahCommand
+	},
+	"!zert": {
+		"description": "Usta command",
+		"requireAdmin": false,
+		"function": zertCommand
+	},
+	"!ercik": {
+		"description": "Ercik command",
+		"requireAdmin": false,
+		"function": ercikCommand
+	},
+	"!yalvaririm": {
+		"description": "Yalvaririm command",
+		"requireAdmin": false,
+		"function": yalvaririmCommand
+	},
+	"!dundo": {
+		"description": "Dundo command",
+		"requireAdmin": false,
+		"function": dundoCommand
+	},
+	"!ruh": {
+		"description": "Ruh command",
+		"requireAdmin": false,
+		"function": ruhCommand
 	}
 };
