@@ -8,7 +8,7 @@ export function restartCommand(player, message) {
 
 	room.sendAnnouncement(`${player.name} started a rematch!`, null, COLORS.ANNOUNCEMENT_COLOR, "bold");
 	room.stopGame();
-	
+
     setTimeout(() => { room.startGame(); }, 10);
 }
 
@@ -36,4 +36,44 @@ export function afkCommand(player, message) {
 
 	room.sendAnnouncement(`${player.name} sets himself as afk!`, null, COLORS.ANNOUNCEMENT_COLOR, "bold");
 	variables.afkPlayers.push(player.id);
+}
+
+export function fantomCommand(player, message) {
+	room.sendAnnouncement(`cemil babba soforun arkasindadir her zaman`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function tellakCommand(player, message) {
+	room.sendAnnouncement(`tellak ban`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function ustaCommand(player, message) {
+	room.sendAnnouncement(`:pomp:`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function dayiCommand(player, message) {
+	room.sendAnnouncement(`aha dayiya sor`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function siyahCommand(player, message) {
+	room.sendAnnouncement(`her sey mi siyah`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function zertCommand(player, message) {
+	room.sendAnnouncement(`tellak babba sizi zert zert geseledi`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function ercikCommand(player, message) {
+	room.sendAnnouncement(`bu bir sanal alem, lütfen haddinizi bilin arkadaşlar`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function dundoCommand(player, message) {
+	room.sendAnnouncement(`efendim lütfen açar mısınız kapıyı`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function yalvaririmCommand(player, message) {
+	room.sendAnnouncement(`yalvarırım atma`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function ruhCommand(player, message) {
+	room.sendAnnouncement(`ruh gibi geziyosun`, null, COLORS.BLUE_ALERT_COLOR, "italic");
 }
