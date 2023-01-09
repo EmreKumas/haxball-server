@@ -8,11 +8,14 @@ import {
 	dayiCommand,
 	siyahCommand,
 	zertCommand,
-	yalvaririmCommand,
+	atmaCommand,
 	ercikCommand,
 	dundoCommand,
 	ruhCommand,
-	komutCommand
+	komutCommand,
+	bosCommand,
+	tokatCommand,
+	abisiCommand
 } from "./command.js";
 
 export const TOKEN = process.env.HEADLESS_TOKEN;
@@ -106,10 +109,10 @@ export const COMMANDS = {
 		"requireAdmin": false,
 		"function": ercikCommand
 	},
-	"!yalvaririm": {
+	"!atma": {
 		"description": "yalvarırım atma",
 		"requireAdmin": false,
-		"function": yalvaririmCommand
+		"function": atmaCommand
 	},
 	"!dundo": {
 		"description": "efendim lütfen açar mısınız kapıyı",
@@ -120,5 +123,20 @@ export const COMMANDS = {
 		"description": "ruh gibi geziyosun",
 		"requireAdmin": false,
 		"function": ruhCommand
+	},
+	"!tokat": {
+		"description": "tokatlarim seni",
+		"requireAdmin": false,
+		"function": tokatCommand
+	},
+	"!abisi": {
+		"description": "geliyorum ağğbisi",
+		"requireAdmin": false,
+		"function": abisiCommand
+	},
+	"!bos": {
+		"description": "nerdeyse bos yapacak",
+		"requireAdmin": false,
+		"function": bosCommand
 	}
 };

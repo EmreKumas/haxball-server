@@ -38,8 +38,12 @@ export function afkCommand(player, message) {
 	variables.afkPlayers.push(player.id);
 }
 
+function isPublicCommand(command) {
+	return command !== "!r" || command !== "!s"
+}
+
 export function komutCommand(player, message) {
-	let commands = Object.keys(COMMANDS).join();
+	let commands = Object.keys(COMMANDS).filter(isPublicCommand).join();
 	room.sendAnnouncement(`${commands}`, player.id, COLORS.ANNOUNCEMENT_COLOR, "bold");
 }
 
@@ -75,10 +79,20 @@ export function dundoCommand(player, message) {
 	room.sendAnnouncement(`efendim lütfen açar mısınız kapıyı`, null, COLORS.BLUE_ALERT_COLOR, "italic");
 }
 
-export function yalvaririmCommand(player, message) {
+export function atmaCommand(player, message) {
 	room.sendAnnouncement(`yalvarırım atma`, null, COLORS.BLUE_ALERT_COLOR, "italic");
 }
 
 export function ruhCommand(player, message) {
 	room.sendAnnouncement(`ruh gibi geziyosun`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function abisiCommand(player, message) {
+	room.sendAnnouncement(`geliyorum ağğbisi`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+export function bosCommand(player, message) {
+	room.sendAnnouncement(`nerdeyse bos yapacak`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+export function tokatCommand(player, message) {
+	room.sendAnnouncement(`tokatlarim seni`, null, COLORS.BLUE_ALERT_COLOR, "italic");
 }
