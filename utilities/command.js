@@ -38,12 +38,8 @@ export function afkCommand(player, message) {
 	variables.afkPlayers.push(player.id);
 }
 
-function isPublicCommand(command) {
-	return command !== "!r" || command !== "!s"
-}
-
 export function komutCommand(player, message) {
-	let commands = Object.keys(COMMANDS).filter(isPublicCommand).join();
+	let commands = Object.keys(COMMANDS).join();
 	room.sendAnnouncement(`${commands}`, player.id, COLORS.ANNOUNCEMENT_COLOR, "bold");
 }
 
@@ -95,4 +91,8 @@ export function bosCommand(player, message) {
 }
 export function tokatCommand(player, message) {
 	room.sendAnnouncement(`tokatlarim seni`, null, COLORS.BLUE_ALERT_COLOR, "italic");
+}
+
+export function tekmeCommand(player, message) {
+	room.sendAnnouncement(`tekmelerim seni`, null, COLORS.BLUE_ALERT_COLOR, "italic");
 }

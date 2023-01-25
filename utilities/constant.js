@@ -15,7 +15,8 @@ import {
 	komutCommand,
 	bosCommand,
 	tokatCommand,
-	abisiCommand
+	abisiCommand,
+	tekmeCommand
 } from "./command.js";
 
 export const TOKEN = process.env.HEADLESS_TOKEN;
@@ -56,12 +57,12 @@ export const playerIdentities = [
 export const COMMANDS = {
 	"!r": {
 		"description": "Restarts the game instantenously",
-		"requireAdmin": false,
+		"requireAdmin": true,
 		"function": restartCommand
 	},
 	"!s": {
 		"description": "Shuffles players and restarts the game",
-		"requireAdmin": false,
+		"requireAdmin": true,
 		"function": shuffleCommand
 	},
 	"!afk": {
@@ -138,5 +139,10 @@ export const COMMANDS = {
 		"description": "nerdeyse bos yapacak",
 		"requireAdmin": false,
 		"function": bosCommand
+	},
+	"!tekme": {
+		"description": "tekmelerim seni",
+		"requireAdmin": false,
+		"function": tekmeCommand
 	}
 };
