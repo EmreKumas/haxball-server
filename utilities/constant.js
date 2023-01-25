@@ -8,11 +8,15 @@ import {
 	dayiCommand,
 	siyahCommand,
 	zertCommand,
-	yalvaririmCommand,
+	atmaCommand,
 	ercikCommand,
 	dundoCommand,
 	ruhCommand,
-	komutCommand
+	komutCommand,
+	bosCommand,
+	tokatCommand,
+	abisiCommand,
+	tekmeCommand
 } from "./command.js";
 
 export const TOKEN = process.env.HEADLESS_TOKEN;
@@ -53,12 +57,12 @@ export const playerIdentities = [
 export const COMMANDS = {
 	"!r": {
 		"description": "Restarts the game instantenously",
-		"requireAdmin": false,
+		"requireAdmin": true,
 		"function": restartCommand
 	},
 	"!s": {
 		"description": "Shuffles players and restarts the game",
-		"requireAdmin": false,
+		"requireAdmin": true,
 		"function": shuffleCommand
 	},
 	"!afk": {
@@ -106,10 +110,10 @@ export const COMMANDS = {
 		"requireAdmin": false,
 		"function": ercikCommand
 	},
-	"!yalvaririm": {
+	"!atma": {
 		"description": "yalvarırım atma",
 		"requireAdmin": false,
-		"function": yalvaririmCommand
+		"function": atmaCommand
 	},
 	"!dundo": {
 		"description": "efendim lütfen açar mısınız kapıyı",
@@ -120,5 +124,25 @@ export const COMMANDS = {
 		"description": "ruh gibi geziyosun",
 		"requireAdmin": false,
 		"function": ruhCommand
+	},
+	"!tokat": {
+		"description": "tokatlarim seni",
+		"requireAdmin": false,
+		"function": tokatCommand
+	},
+	"!abisi": {
+		"description": "geliyorum ağğbisi",
+		"requireAdmin": false,
+		"function": abisiCommand
+	},
+	"!bos": {
+		"description": "nerdeyse bos yapacak",
+		"requireAdmin": false,
+		"function": bosCommand
+	},
+	"!tekme": {
+		"description": "tekmelerim seni",
+		"requireAdmin": false,
+		"function": tekmeCommand
 	}
 };
